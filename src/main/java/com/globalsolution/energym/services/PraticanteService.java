@@ -39,4 +39,8 @@ public class PraticanteService {
         }
         return pontos;
     }
+
+    public Praticante save(Praticante praticante) {
+        return repository.save(praticante);
+    }
 }
