@@ -18,8 +18,17 @@ Energym é mais do que uma academia — é uma maneira inteligente e sustentáve
 ### 🎥 **Pitch**  
 [Vídeo da solução](https://www.youtube.com/watch?v=4BY1kcwtntY)
 
+### 🎥 **Deploy**  
+[Deploy da solução](https://www.youtube.com/watch?v=qGqVND45qYk)
+
+### **Azure DevOps**  
+[Organização do projeto](https://dev.azure.com/ProjetosAulas-2024/Energym%20-%20GS)
+
 ### **Arquitetura**  
 ![Arquitetura](https://drive.google.com/uc?id=1joUDiv1dleYkAa8NwIL8TsGR9Xdb2ddk)
+
+### **Tarefa finalizada**  
+![Task](https://drive.google.com/uc?id=1Eb03Fh_BXeIUtjwkHijgEZq51j8Q4U75)
 
 ---
 
@@ -44,6 +53,19 @@ az webapp create -g $rg -p $appServicePlanName --runtime "JAVA:17" -n $webAppNam
 ```
 
 ## Configuração do Banco de Dados
+
+- **Conexão**:
+Utilizaremos um banco de dados em nuvem, altere as credenciais do banco de dados.
+
+```properties
+spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
+spring.datasource.username={username}
+spring.datasource.password={password}
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+```
 
 1. **Remover Tabelas com Dependências**
 
